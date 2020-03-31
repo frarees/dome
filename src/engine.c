@@ -53,7 +53,11 @@ ENGINE_record(void* ptr) {
 internal void
 ENGINE_openLogFile(ENGINE* engine) {
   // DOME-2020-02-02-090000.log
+#ifdef RG350
+  char* filename = "/var/tmp/DOME-out.log";
+#else
   char* filename = "DOME-out.log";
+#endif
   engine->debug.logFile = fopen(filename, "w+");
 }
 

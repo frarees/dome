@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=DOME
+Comment=Dynamic Opinionated Minimalist Engine
+Exec=dome %f
+Icon=dome
+Terminal=false
+Type=Application
+Categories=games;
+StartupNotify=true
+X-OD-NeedsDownscaling=true

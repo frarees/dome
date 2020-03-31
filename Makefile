@@ -85,7 +85,11 @@ ifneq (, $(findstring MINGW, $(SYS)))
 endif
 
 ifneq (, $(findstring Linux, $(SYS)))
-  CFLAGS += -Wno-discarded-qualifiers -Wno-clobbered
+  ifeq ($(RG350),1)
+    CFLAGS += -Wno-clobbered -DRG350
+  else
+    CFLAGS += -Wno-discarded-qualifiers -Wno-clobbered
+  endif
 endif
 
 

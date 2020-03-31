@@ -20,6 +20,9 @@
 #include <math.h>
 #include <libgen.h>
 
+#ifdef RG350
+#include <linux/limits.h>
+#endif
 
 #include <wren.h>
 #include <SDL.h>
